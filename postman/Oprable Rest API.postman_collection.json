@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "0f46b03c-73e5-4be4-abdc-eea5ca5f2fc8",
+		"name": "Oprable Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{basepath}}/hello/",
+					"host": [
+						"{{basepath}}"
+					],
+					"path": [
+						"hello",
+						""
+					]
+				},
+				"description": "ping pong "
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{dev-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{basepath}}/ping/",
+					"host": [
+						"{{basepath}}"
+					],
+					"path": [
+						"ping",
+						""
+					]
+				},
+				"description": "ping pong "
+			},
+			"response": []
+		},
+		{
+			"name": "enroll- enroll patient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{dev-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{basepath}}/enroll?fname=Stephen&lname=Pujols1473&dob=08/24/1957&gender=Male&address=Stephen address&zip=46336&mobile_number=6563451212",
+					"host": [
+						"{{basepath}}"
+					],
+					"path": [
+						"enroll"
+					],
+					"query": [
+						{
+							"key": "fname",
+							"value": "Stephen"
+						},
+						{
+							"key": "lname",
+							"value": "Pujols1473"
+						},
+						{
+							"key": "dob",
+							"value": "08/24/1957"
+						},
+						{
+							"key": "gender",
+							"value": "Male"
+						},
+						{
+							"key": "address",
+							"value": "Stephen address"
+						},
+						{
+							"key": "zip",
+							"value": "46336"
+						},
+						{
+							"key": "mobile_number",
+							"value": "6563451212"
+						}
+					]
+				},
+				"description": "enroll- enroll patient"
+			},
+			"response": []
+		},
+		{
+			"name": "enroll api- request status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{dev-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{basepath}}/enroll?request_id=d0b4d201-e8ee-4f04-a10a-b8750a4f9a74",
+					"host": [
+						"{{basepath}}"
+					],
+					"path": [
+						"enroll"
+					],
+					"query": [
+						{
+							"key": "request_id",
+							"value": "d0b4d201-e8ee-4f04-a10a-b8750a4f9a74"
+						}
+					]
+				},
+				"description": "enroll api- request status"
+			},
+			"response": []
+		},
+		{
+			"name": "get_patient_document_urls",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{dev-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{basepath}}/enroll?patientId=d0b4d201-e8ee-4f04-a10a-b8750a4f9a74",
+					"host": [
+						"{{basepath}}"
+					],
+					"path": [
+						"enroll"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "d0b4d201-e8ee-4f04-a10a-b8750a4f9a74"
+						}
+					]
+				},
+				"description": "enroll api- request status"
+			},
+			"response": []
+		},
+		{
+			"name": "get_s3_file_signedurl",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{dev-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{basepath}}/enroll?patientId=d0b4d201-e8ee-4f04-a10a-b8750a4f9a74&filename='abc.txt'",
+					"host": [
+						"{{basepath}}"
+					],
+					"path": [
+						"enroll"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "d0b4d201-e8ee-4f04-a10a-b8750a4f9a74"
+						},
+						{
+							"key": "filename",
+							"value": "'abc.txt'"
+						}
+					]
+				},
+				"description": "enroll api- request status"
+			},
+			"response": []
+		}
+	]
+}

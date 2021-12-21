@@ -11,8 +11,8 @@ function generate_token(params){
 function decode_token(token){
 	try{
       return jwt.decode(token);
-    } catch (err) {
-        return err.stack
+    }catch (err) {
+       return err.stack
     }
 }
 
@@ -39,7 +39,7 @@ let token = generate_token({
 console.log(`\nGenerated Token: \n${token}`)
 
 
-// 2. Verify token
+// 2. Decode token
 let decodedToken = decode_token(token)
 console.log('\nDecoeded Token: \n',JSON.stringify(decodedToken, null, 4))
 
