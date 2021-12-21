@@ -2,22 +2,12 @@ var jwt = require('jsonwebtoken');
 const fs = require('fs')
 const moment = require('moment');
 const iat = moment().unix()
-
 const privateKey = fs.readFileSync('./Data/privatekey.pem') // Provide absolute path of private key file path here
 
-/*
-	Input: This take private key and paramters as input
-	Output: token 
-*/
 function generate_token(params){
 	return jwt.sign(params, privateKey, { algorithm: 'RS256'});
 }
 
-
-/*
-	Input: token
-	Output: decoded token if token is valid 
-*/
 function decode_token(token){
 	try{
       return jwt.decode(token);
@@ -25,8 +15,6 @@ function decode_token(token){
         return err.stack
     }
 }
-
-
 
 // --------------------------------- Function Calling -------------------------------------------
 // 1. Generate token
