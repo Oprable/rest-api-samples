@@ -1,6 +1,6 @@
 # Oprable Rest Apis
 
-[Click here for Oprable Website:](https://www.oprable.com)
+[Click here for Swagger Document:](http://pull-api-doc.oprable.com/)
 
 This repo contains the sample and associated code for Oprable rest apis.
 # Summary
