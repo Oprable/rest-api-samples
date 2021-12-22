@@ -16,13 +16,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{basepath}}/hello/",
+					"raw": "{{basepath}}/hello",
 					"host": [
 						"{{basepath}}"
 					],
 					"path": [
-						"hello",
-						""
+						"hello"
 					]
 				},
 				"description": "ping pong "
@@ -44,13 +43,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{basepath}}/ping/",
+					"raw": "{{basepath}}/ping",
 					"host": [
 						"{{basepath}}"
 					],
 					"path": [
-						"ping",
-						""
+						"ping"
 					]
 				},
 				"description": "ping pong "
@@ -129,7 +127,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{basepath}}/enroll?request_id=d0b4d201-e8ee-4f04-a10a-b8750a4f9a74",
+					"raw": "{{basepath}}/enroll?request_id=002cbb93-8e7f-4d56-a19b-406b682cea60",
 					"host": [
 						"{{basepath}}"
 					],
@@ -139,7 +137,7 @@
 					"query": [
 						{
 							"key": "request_id",
-							"value": "d0b4d201-e8ee-4f04-a10a-b8750a4f9a74"
+							"value": "002cbb93-8e7f-4d56-a19b-406b682cea60"
 						}
 					]
 				},
@@ -162,17 +160,17 @@
 					}
 				],
 				"url": {
-					"raw": "{{basepath}}/enroll?patientId=d0b4d201-e8ee-4f04-a10a-b8750a4f9a74",
+					"raw": "{{basepath}}/get_patient_document_urls?patient_id=8889151591540",
 					"host": [
 						"{{basepath}}"
 					],
 					"path": [
-						"enroll"
+						"get_patient_document_urls"
 					],
 					"query": [
 						{
-							"key": "patientId",
-							"value": "d0b4d201-e8ee-4f04-a10a-b8750a4f9a74"
+							"key": "patient_id",
+							"value": "8889151591540"
 						}
 					]
 				},
@@ -195,21 +193,21 @@
 					}
 				],
 				"url": {
-					"raw": "{{basepath}}/enroll?patientId=d0b4d201-e8ee-4f04-a10a-b8750a4f9a74&filename='abc.txt'",
+					"raw": "{{basepath}}/get_s3_file_signedurl?patient_id=8889151591540&file_name=text.txt",
 					"host": [
 						"{{basepath}}"
 					],
 					"path": [
-						"enroll"
+						"get_s3_file_signedurl"
 					],
 					"query": [
 						{
-							"key": "patientId",
-							"value": "d0b4d201-e8ee-4f04-a10a-b8750a4f9a74"
+							"key": "patient_id",
+							"value": "8889151591540"
 						},
 						{
-							"key": "filename",
-							"value": "'abc.txt'"
+							"key": "file_name",
+							"value": "text.txt"
 						}
 					]
 				},
